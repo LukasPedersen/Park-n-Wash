@@ -6,17 +6,28 @@ namespace Park_n_Wash
 {
     public class ParkingLot
     {
-        public List<ParkingSpot> AllSpots
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        private List<ParkingSpot> allSpots;
 
+        public ParkingLot()
+        {
+            allSpots = new List<ParkingSpot>();
+        }
         public void ShowAvailableSpots()
         {
             throw new System.NotImplementedException();
+        }
+
+        public List<ParkingSpot> ShowAllSpots()
+        {
+            return allSpots;
+        }
+        public List<ParkingSpot> AllSpots
+        {
+            get => allSpots;
+            set
+            {
+                allSpots = value;
+            }
         }
     }
 }

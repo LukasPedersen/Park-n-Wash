@@ -6,9 +6,14 @@ namespace Park_n_Wash
 {
     public class Ticket
     {
-        int ticketID;
+        int id;
         DateTime date;
 
+        public Ticket(int ticketID, DateTime timeStamp)
+        {
+            id = ticketID;
+            date = timeStamp;
+        }
         public DateTime TimeStamp
         {
             get => date;
@@ -20,10 +25,10 @@ namespace Park_n_Wash
 
         public int TicketID
         {
-            get => ticketID;
+            get => id;
             set
             {
-                ticketID = value;
+                id = value;
             }
         }
     }

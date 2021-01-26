@@ -4,16 +4,16 @@ using System.Text;
 
 namespace Park_n_Wash
 {
-    public class Gate
+    public class GateRepository : IGate
     {
         public void CheckIn()
         {
-            throw new System.NotImplementedException();
+
         }
 
         public void CheckOut()
         {
-            throw new System.NotImplementedException();
+
         }
     }
 }

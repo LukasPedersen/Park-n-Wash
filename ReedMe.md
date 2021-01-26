@@ -23,6 +23,11 @@ No tool or manager needed for installation.
 1. User gets a ticket that is returned on check out
 ```
 ### Versions
+##### v0.2.1
+```
+1. Made an interface for Gate()
+2. Initializing of components on startup 
+```
 ##### v0.1.1
 ```
 1. Made a small fix for all clases
