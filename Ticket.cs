@@ -6,19 +6,24 @@ namespace Park_n_Wash
 {
     public class Ticket
     {
+        int ticketID;
+        DateTime date;
+
         public DateTime TimeStamp
         {
-            get => default;
+            get => date;
             set
             {
+                date = value;
             }
         }
 
         public int TicketID
         {
-            get => default;
+            get => ticketID;
             set
             {
+                ticketID = value;
             }
         }
     }

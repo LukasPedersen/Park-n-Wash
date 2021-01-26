@@ -6,28 +6,34 @@ namespace Park_n_Wash
 {
     public class ParkingSpot
     {
+        int id;
+        string type;
+        bool occupied;
 
         public int ID
         {
-            get => default;
+            get => id;
             set
             {
+                id = value;
             }
         }
 
         public string Type
         {
-            get => default;
+            get => type;
             set
             {
+                type = value;
             }
         }
 
         public bool Occupied
         {
-            get => default;
+            get => occupied;
             set
             {
+                occupied = value;
             }
         }
     }

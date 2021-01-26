@@ -23,6 +23,10 @@ No tool or manager needed for installation.
 1. User gets a ticket that is returned on check out
 ```
 ### Versions
+##### v0.1.1
+```
+1. Made a small fix for all clases
+```
 ##### v0.1.0
 ```
 1. Made a ReadMe file
