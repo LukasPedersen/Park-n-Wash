@@ -24,6 +24,11 @@ No tool or manager needed for installation.
 2. User will be given a 4 digit pin code thats on the ticket
 ```
 ### Versions
+##### v0.3.2
+```
+1. Implemented inheritance in ticket so user can get diffrent types of tickets
+2. Made a test in gate but dont know if it works yet as i dont have any code to try it with
+```
 ##### v0.2.2
 ```
 1. Fix for list<ParkingSpots> list is now accessible for the program

@@ -11,15 +11,8 @@ namespace Park_n_Wash
         private DateTime date;
         private int spotID;
         private int pin;
+        private int ticketTypeCost;
 
-        //Constructor
-        public Ticket(int ticketID, DateTime timeStamp, int parkingSpotID, int pinCode)
-        {
-            id = ticketID;
-            date = timeStamp;
-            spotID = parkingSpotID;
-            pin = pinCode;
-        }
         //Properties
         public DateTime TimeStamp
         {
@@ -54,6 +47,14 @@ namespace Park_n_Wash
             set
             {
                 pin = value;
+            }
+        }
+        public int TicketTypeCost
+        {
+            get => ticketTypeCost;
+            set
+            {
+                ticketTypeCost = value;
             }
         }
     }
