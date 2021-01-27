@@ -6,14 +6,12 @@ namespace Park_n_Wash
 {
     public class ParkingSpot
     {
+        //Fields
         int id;
         string type;
         bool occupied;
 
-        public ParkingSpot()
-        {
-
-        }
+        //Constructor
         public ParkingSpot(int spotID, string spotType, bool isOccupied)
         {
             id = spotID;
@@ -21,6 +19,7 @@ namespace Park_n_Wash
             occupied = isOccupied;
         }
 
+        //Properties
         public int ID
         {
             get => id;

@@ -21,8 +21,15 @@ No tool or manager needed for installation.
 ### Output:
 ```
 1. User gets a ticket that is returned on check out
+2. User will be given a 4 digit pin code thats on the ticket
 ```
 ### Versions
+##### v0.2.2
+```
+1. Fix for list<ParkingSpots> list is now accessible for the program
+2. Small fix for InitializingComponents() just small code optimization
+2. Added more in code comments and summaries
+```
 ##### v0.2.1
 ```
 1. Made an interface for Gate()

@@ -8,51 +8,50 @@ namespace Park_n_Wash
         static void Main()
         {
             InitializeComponents();
-            Menu();
         }
         //Initializing of components
         private static void InitializeComponents()
         {
-            ParkingSpot pp = new ParkingSpot();
             ParkingLot pl = new ParkingLot();
             Console.ForegroundColor = ConsoleColor.DarkGreen;
 
             //Make 50 personal vehicle parking spots
             int idCount = 1;
-            for (int i = 0; i <= 50; i++)
+            for (int i = 0; i < 50; i++)
             {
                 pl.AllSpots.Add(new ParkingSpot(idCount, "Personal vehicle", false));
                 idCount++;
             }
             //Make 10 trailer parking spots
-            for (int i = 0; i <= 60; i++)
+            for (int i = 0; i < 10; i++)
             {
                 pl.AllSpots.Add(new ParkingSpot(idCount, "Trailer", false));
                 idCount++;
             }
             //Make 12 truck parking spots
-            for (int i = 0; i <= 72; i++)
+            for (int i = 0; i < 12; i++)
             {
                 pl.AllSpots.Add(new ParkingSpot(idCount, "Truck", false));
                 idCount++;
             }
             //Make 5 handicap friendly parking spots
-            for (int i = 0; i <= 77; i++)
+            for (int i = 0; i < 5; i++)
             {
                 pl.AllSpots.Add(new ParkingSpot(idCount, "Handicap friendly", false));
                 idCount++;
             }
+            ParkingLot.SaveParkingSpot(pl.AllSpots);
+            Menu();
         }
 
         //User menu
         public static void Menu()
         {
             Program pg = new Program();
-            ParkingLot pl = new ParkingLot();
             pg.WriteToConsole($"Hello and wellcome to Park'n'Wash\nAll spots:\n", 25);
-            foreach (ParkingSpot parkingspot in pl.AllSpots)
+            foreach (ParkingSpot parkingspot in ParkingLot.ShowAllSpots())
             {
-                Console.WriteLine($"Parking spot number: {parkingspot.ID}");
+                Console.WriteLine($"Parking spot number: {parkingspot.ID} Type: {parkingspot.Type} Occupied?: {parkingspot.Occupied}");
             }
             Console.ReadKey();
         }

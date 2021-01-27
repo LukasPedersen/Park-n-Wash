@@ -6,14 +6,21 @@ namespace Park_n_Wash
 {
     public class Ticket
     {
-        int id;
-        DateTime date;
+        //Fields
+        private int id;
+        private DateTime date;
+        private int spotID;
+        private int pin;
 
-        public Ticket(int ticketID, DateTime timeStamp)
+        //Constructor
+        public Ticket(int ticketID, DateTime timeStamp, int parkingSpotID, int pinCode)
         {
             id = ticketID;
             date = timeStamp;
+            spotID = parkingSpotID;
+            pin = pinCode;
         }
+        //Properties
         public DateTime TimeStamp
         {
             get => date;
@@ -29,6 +36,24 @@ namespace Park_n_Wash
             set
             {
                 id = value;
+            }
+        }
+
+        public int SpotID
+        {
+            get => spotID;
+            set
+            {
+                spotID = value;
+            }
+        }
+
+        public int Pin
+        {
+            get => pin;
+            set
+            {
+                pin = value;
             }
         }
     }

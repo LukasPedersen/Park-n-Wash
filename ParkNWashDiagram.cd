@@ -3,12 +3,12 @@
   <Class Name="Park_n_Wash.ParkingLot">
     <Position X="5.25" Y="0.75" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AAAgAAAAIACAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <HashCode>AAAgAAAAIACAAAAAAAAAAABAAAAAAAAAAAgAAAAAAAA=</HashCode>
       <FileName>ParkingLot.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Park_n_Wash.ParkingSpot">
-    <Position X="5.25" Y="3.25" Width="2.5" />
+    <Position X="5.25" Y="3.5" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAQAAAAEAAAgAAAAAAAAAAAAAABAAAAAQAAAAAAAgA=</HashCode>
       <FileName>ParkingSpot.cs</FileName>
