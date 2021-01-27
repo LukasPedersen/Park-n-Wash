@@ -15,22 +15,43 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Park_n_Wash.GateRepository">
-    <Position X="8.25" Y="1.5" Width="2.5" />
+    <Position X="8.25" Y="0.75" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAABAAAAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAkAAAABgAAAAIACAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Gate.cs</FileName>
     </TypeIdentifier>
     <Lollipop Orientation="Right" Position="0.55" />
   </Class>
   <Class Name="Park_n_Wash.Ticket">
-    <Position X="8.25" Y="3.25" Width="2.5" />
+    <Position X="8.25" Y="3.5" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAQAgA=</HashCode>
+      <HashCode>AAAAACCAAAAAAAIAAEACAABAAAAAAAAAIAAAAQAQAgA=</HashCode>
       <FileName>Ticket.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="Park_n_Wash.TicketGold">
+    <Position X="11" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TicketGold.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Park_n_Wash.TicketSilver">
+    <Position X="11" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TicketSilver.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Park_n_Wash.TicketBronze">
+    <Position X="8.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TicketBornze.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Interface Name="Park_n_Wash.IGate">
-    <Position X="11.25" Y="1.5" Width="1.5" />
+    <Position X="11.25" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAABAAAAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IGate.cs</FileName>
