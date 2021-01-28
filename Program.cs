@@ -54,6 +54,7 @@ namespace Park_n_Wash
             int countTruck = 0;
             int countHandicapFriendly = 0;
             ConsoleHandler.WriteToConsole($"Hello and wellcome to Park'n'Wash\n", 25);
+            //Finds all available parking spots and counts how many there are
             foreach (ParkingSpot parkingspot in ParkingLot.ShowAvailableSpots())
             {
                 switch (parkingspot.Type)
@@ -72,7 +73,38 @@ namespace Park_n_Wash
                         break;
                 }
             }
-            ConsoleHandler.WriteToConsole($"\nAvailable parking spots:\n[{countPersonalVehicle.ToString("000")}] Personal vehicle spots\n[{countTrailer.ToString("000")}] Trailer spots\n[{countTruck.ToString("000")}] Truck Spots\n[{countHandicapFriendly.ToString("000")}] Handicap friendly spots" ,25);
+            ConsoleHandler.WriteToConsole($"\nAvailable parking spots:\n[{countPersonalVehicle.ToString("000")}] Personal vehicle spots\n[{countTrailer.ToString("000")}] Trailer spots\n[{countTruck.ToString("000")}] Truck Spots\n[{countHandicapFriendly.ToString("000")}] Handicap friendly spots\n" ,25);
+            ConsoleHandler.WriteToConsole("\nSelect your parking spot type:\n1: Personal vehicle spot\n2: Trailer spot\n3: Truck Spot\n4: Handicap friendly spot\n", 25);
+            string key = Console.ReadKey().KeyChar.ToString();
+            string spotType = "";
+            switch (key)
+            {
+                case "1":
+                    spotType = "Personal vehicle";
+                    break;
+                case "2":
+                    spotType = "Trailer";
+                    break;
+                case "3":
+                    spotType = "Truck";
+                    break;
+                case "4":
+                    spotType = "Handicap friendly";
+                    break;
+                default:
+                    Menu();
+                    break;
+            }
+            int spotID = 0;
+            //Finds first available parking spot ID with the selected type
+            foreach (ParkingSpot parkingSpot in ParkingLot.ShowAvailableSpots())
+            {
+                if (parkingSpot.Type == spotType)
+                {
+                    spotID = parkingSpot.ID;
+                    break;
+                }
+            }
             Console.ReadKey();
         }
     }
