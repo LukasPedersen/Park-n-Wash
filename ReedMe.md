@@ -24,6 +24,15 @@ No tool or manager needed for installation.
 2. User will be given a 4 digit pin code thats on the ticket
 ```
 ### Versions
+##### v0.5.3
+```
+1. Implemented common code
+2. Added ToDo list in ReadMe file
+```
+##### v0.4.3
+```
+1. Updated program to .netframework
+```
 ##### v0.4.2
 ```
 1. User will now be shown all available parking spots on startup
@@ -53,7 +62,12 @@ No tool or manager needed for installation.
 1. Made a ReadMe file
 2. Made UML diagram and made clases that will be used in the future
 ```
-
+### ToDo list
+- [x] User can see all available parking spots.
+- [ ] User can select parking spot from the list af all available parking spots.
+- [ ] User can select type of ticket for selected porking spot.
+- [ ] User gets a ticket with, a parking spot id, ticket id, ticket type, timestamp, and a pin code
+- [ ] On checkout user will input ticket(pin code) and get it back with a new time stamp and a receipt for payment
 ## Contributors
 [Lukas Pedersen](https://https://github.com/LukasPedersen)
 

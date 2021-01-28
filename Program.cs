@@ -1,4 +1,5 @@
 ﻿using System;
+using Park_n_Wash.Common;
 using System.Collections.Generic;
 
 namespace Park_n_Wash
@@ -52,7 +53,7 @@ namespace Park_n_Wash
             int countTrailer = 0;
             int countTruck = 0;
             int countHandicapFriendly = 0;
-            pg.WriteToConsole($"Hello and wellcome to Park'n'Wash\n", 25);
+            ConsoleHandler.WriteToConsole($"Hello and wellcome to Park'n'Wash\n", 25);
             foreach (ParkingSpot parkingspot in ParkingLot.ShowAvailableSpots())
             {
                 switch (parkingspot.Type)
@@ -71,22 +72,8 @@ namespace Park_n_Wash
                         break;
                 }
             }
-            pg.WriteToConsole($"\nAvailable parking spots:\n[{countPersonalVehicle.ToString("000")}] Personal vehicle spots\n[{countTrailer.ToString("000")}] Trailer spots\n[{countTruck.ToString("000")}] Truck Spots\n[{countHandicapFriendly.ToString("000")}] Handicap friendly spots" ,25);
+            ConsoleHandler.WriteToConsole($"\nAvailable parking spots:\n[{countPersonalVehicle.ToString("000")}] Personal vehicle spots\n[{countTrailer.ToString("000")}] Trailer spots\n[{countTruck.ToString("000")}] Truck Spots\n[{countHandicapFriendly.ToString("000")}] Handicap friendly spots" ,25);
             Console.ReadKey();
-        }
-
-        /// <summary>
-        /// Writes each char from <paramref name="text"></paramref> to console with a thread.sleep(<paramref name="speed"></paramref>) between each char
-        /// </summary>
-        /// <param name="text"></param>
-        /// <param name="speed"></param>
-        public void WriteToConsole(string text, int speed)
-        {
-            foreach (char letter in text)
-            {
-                Console.Write(letter);
-                System.Threading.Thread.Sleep(speed);
-            }
         }
     }
 }

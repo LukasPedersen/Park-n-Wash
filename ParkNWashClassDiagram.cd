@@ -1,57 +1,57 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Park_n_Wash.ParkingLot">
-    <Position X="5.25" Y="0.75" Width="2.5" />
+    <Position X="0.5" Y="0.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAgAAAAIACAAAAAAAAAAABAAAAAAAAAAAgAAAAAAAA=</HashCode>
       <FileName>ParkingLot.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="Park_n_Wash.GateRepository" BaseTypeListCollapsed="true">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAkAAAABgAAAAIACAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Gate.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Right" Position="0.622" />
+  </Class>
   <Class Name="Park_n_Wash.ParkingSpot">
-    <Position X="5.25" Y="3.5" Width="2.5" />
+    <Position X="0.5" Y="3.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAQAAAAEAAAgAAAAAAAAAAAAAABAAAAAQAAAAAAAgA=</HashCode>
       <FileName>ParkingSpot.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Park_n_Wash.GateRepository">
-    <Position X="8.25" Y="0.75" Width="2.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAkAAAABgAAAAIACAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Gate.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Orientation="Right" Position="0.55" />
-  </Class>
   <Class Name="Park_n_Wash.Ticket">
-    <Position X="8.25" Y="3.5" Width="2.5" />
+    <Position X="2.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAACCAAAAAAAIAAEACAABAAAAAAAAAIAAAAQAQAgA=</HashCode>
       <FileName>Ticket.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Park_n_Wash.TicketGold">
-    <Position X="11" Y="3" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>TicketGold.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Park_n_Wash.TicketSilver">
-    <Position X="11" Y="5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>TicketSilver.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Park_n_Wash.TicketBronze">
-    <Position X="8.75" Y="6.75" Width="1.5" />
+  <Class Name="Park_n_Wash.TicketBronze" Collapsed="true">
+    <Position X="4.5" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>TicketBornze.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="Park_n_Wash.TicketGold" Collapsed="true">
+    <Position X="4.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TicketGold.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Park_n_Wash.TicketSilver" Collapsed="true">
+    <Position X="4.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TicketSilver.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Interface Name="Park_n_Wash.IGate">
-    <Position X="11.25" Y="0.75" Width="1.5" />
+    <Position X="4.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAABAAAAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IGate.cs</FileName>
