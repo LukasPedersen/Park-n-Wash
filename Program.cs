@@ -48,11 +48,30 @@ namespace Park_n_Wash
         public static void Menu()
         {
             Program pg = new Program();
-            pg.WriteToConsole($"Hello and wellcome to Park'n'Wash\nAll spots:\n", 25);
-            foreach (ParkingSpot parkingspot in ParkingLot.ShowAllSpots())
+            int countPersonalVehicle = 0;
+            int countTrailer = 0;
+            int countTruck = 0;
+            int countHandicapFriendly = 0;
+            pg.WriteToConsole($"Hello and wellcome to Park'n'Wash\n", 25);
+            foreach (ParkingSpot parkingspot in ParkingLot.ShowAvailableSpots())
             {
-                Console.WriteLine($"Parking spot number: {parkingspot.ID} Type: {parkingspot.Type} Occupied?: {parkingspot.Occupied}");
+                switch (parkingspot.Type)
+                {
+                    case "Personal vehicle":
+                        countPersonalVehicle++;
+                        break;
+                    case "Trailer":
+                        countTrailer++;
+                        break;
+                    case "Truck":
+                        countTruck++;
+                        break;
+                    case "Handicap friendly":
+                        countHandicapFriendly++;
+                        break;
+                }
             }
+            pg.WriteToConsole($"\nAvailable parking spots:\n[{countPersonalVehicle.ToString("000")}] Personal vehicle spots\n[{countTrailer.ToString("000")}] Trailer spots\n[{countTruck.ToString("000")}] Truck Spots\n[{countHandicapFriendly.ToString("000")}] Handicap friendly spots" ,25);
             Console.ReadKey();
         }
 
