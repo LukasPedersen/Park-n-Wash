@@ -24,6 +24,10 @@ No tool or manager needed for installation.
 2. User will be given a 4 digit pin code thats on the ticket
 ```
 ### Versions
+##### v0.4.2
+```
+1. User will now be shown all available parking spots on startup
+```
 ##### v0.3.2
 ```
 1. Implemented inheritance in ticket so user can get diffrent types of tickets
