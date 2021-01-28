@@ -49,63 +49,136 @@ namespace Park_n_Wash
         public static void Menu()
         {
             Program pg = new Program();
-            int countPersonalVehicle = 0;
-            int countTrailer = 0;
-            int countTruck = 0;
-            int countHandicapFriendly = 0;
-            ConsoleHandler.WriteToConsole($"Hello and wellcome to Park'n'Wash\n", 25);
-            //Finds all available parking spots and counts how many there are
-            foreach (ParkingSpot parkingspot in ParkingLot.ShowAvailableSpots())
+            GateRepository gate = new GateRepository();
+            do
             {
-                switch (parkingspot.Type)
+                int countPersonalVehicle = 0;
+                int countTrailer = 0;
+                int countTruck = 0;
+                int countHandicapFriendly = 0;
+                bool loop = true;
+                Console.Clear();
+                ConsoleHandler.WriteToConsole($"Hello and wellcome to Park'n'Wash\n", 20);
+                //Finds all available parking spots and counts how many there are
+                foreach (ParkingSpot parkingspot in ParkingLot.ShowAvailableSpots())
                 {
-                    case "Personal vehicle":
-                        countPersonalVehicle++;
-                        break;
-                    case "Trailer":
-                        countTrailer++;
-                        break;
-                    case "Truck":
-                        countTruck++;
-                        break;
-                    case "Handicap friendly":
-                        countHandicapFriendly++;
-                        break;
+                    switch (parkingspot.Type)
+                    {
+                        case "Personal vehicle":
+                            countPersonalVehicle++;
+                            break;
+                        case "Trailer":
+                            countTrailer++;
+                            break;
+                        case "Truck":
+                            countTruck++;
+                            break;
+                        case "Handicap friendly":
+                            countHandicapFriendly++;
+                            break;
+                    }
                 }
-            }
-            ConsoleHandler.WriteToConsole($"\nAvailable parking spots:\n[{countPersonalVehicle.ToString("000")}] Personal vehicle spots\n[{countTrailer.ToString("000")}] Trailer spots\n[{countTruck.ToString("000")}] Truck Spots\n[{countHandicapFriendly.ToString("000")}] Handicap friendly spots\n" ,25);
-            ConsoleHandler.WriteToConsole("\nSelect your parking spot type:\n1: Personal vehicle spot\n2: Trailer spot\n3: Truck Spot\n4: Handicap friendly spot\n", 25);
-            string key = Console.ReadKey().KeyChar.ToString();
-            string spotType = "";
-            switch (key)
-            {
-                case "1":
-                    spotType = "Personal vehicle";
-                    break;
-                case "2":
-                    spotType = "Trailer";
-                    break;
-                case "3":
-                    spotType = "Truck";
-                    break;
-                case "4":
-                    spotType = "Handicap friendly";
-                    break;
-                default:
-                    Menu();
-                    break;
-            }
-            int spotID = 0;
-            //Finds first available parking spot ID with the selected type
-            foreach (ParkingSpot parkingSpot in ParkingLot.ShowAvailableSpots())
-            {
-                if (parkingSpot.Type == spotType)
+                ConsoleHandler.WriteToConsole($"\nAvailable parking spots:\n[{countPersonalVehicle.ToString("000")}] Personal vehicle spots\n[{countTrailer.ToString("000")}] Trailer spots\n[{countTruck.ToString("000")}] Truck Spots\n[{countHandicapFriendly.ToString("000")}] Handicap friendly spots\n", 20);
+                ConsoleHandler.WriteToConsole("\nSelect your parking spot type:\n1: Personal vehicle spot\n2: Trailer spot\n3: Truck Spot\n4: Handicap friendly spot\n", 20);
+                string spotType = "";
+                do
                 {
-                    spotID = parkingSpot.ID;
-                    break;
+                    string key = Console.ReadKey().KeyChar.ToString();
+                    switch (key)
+                    {
+                        case "1":
+                            spotType = "Personal vehicle";
+                            loop = false;
+                            break;
+                        case "2":
+                            spotType = "Trailer";
+                            loop = false;
+                            break;
+                        case "3":
+                            spotType = "Truck";
+                            loop = false;
+                            break;
+                        case "4":
+                            spotType = "Handicap friendly";
+                            loop = false;
+                            break;
+                    }
+                } while (loop);
+                loop = true;
+
+                //Finds first available parking spot ID with the selected type
+                int spotID = 0;
+                foreach (ParkingSpot parkingSpot in ParkingLot.ShowAvailableSpots())
+                {
+                    if (parkingSpot.Type == spotType && parkingSpot.Occupied == false)
+                    {
+                        spotID = parkingSpot.ID;
+                        parkingSpot.Occupied = true;
+                        break;
+                    }
                 }
-            }
-            Console.ReadKey();
+                Console.Clear();
+
+                ConsoleHandler.WriteToConsole("Select ticket type\n", 20);
+                ConsoleHandler.WriteToConsole("\nDifference between ticket types\nGold ticket includes: Parking, car wash and better security\nSilver ticket includes: Parking and car wash\nBronze ticket includes: Parking\n", 20);
+                ConsoleHandler.WriteToConsole("1: Gold\n2: Silver\n3: Bronze\nX: Exit\n", 20);
+                UInt16 ticketTypeInt = 0;
+                string ticketTypeString = "";
+                do
+                {
+                    string key = Console.ReadKey().KeyChar.ToString();
+                    switch (key)
+                    {
+                        case "1":
+                            ticketTypeInt = 1;
+                            ticketTypeString = "Gold";
+                            loop = false;
+                            break;
+                        case "2":
+                            ticketTypeInt = 2;
+                            ticketTypeString = "Silver";
+                            loop = false;
+                            break;
+                        case "3":
+                            ticketTypeInt = 3;
+                            ticketTypeString = "Bronze";
+                            loop = false;
+                            break;
+                        case "x":
+                            loop = false;
+                            Menu();
+                            break;
+                    }
+                } while (loop);
+                loop = true;
+                Console.Clear();
+
+                ConsoleHandler.WriteToConsole($"Is your ticket infomation correct Y/N?\nParking spot type: {spotType}\nTicket type: {ticketTypeString}\n", 20);
+                do
+                {
+                    string key = Console.ReadKey().KeyChar.ToString();
+                    switch (key)
+                    {
+                        case "y":
+                            gate.CheckIn(ticketTypeInt, spotID);
+                            loop = false;
+                            break;
+                        case "n":
+                            Console.Clear();
+                            ConsoleHandler.WriteToConsole("Please try again", 20);
+                            ConsoleHandler.WriteToConsole("...", 500);
+                            break;
+                    }
+                } while (loop);
+                loop = true;
+                Console.Clear();
+                ConsoleHandler.WriteToConsole("Here is your ticket", 100);
+                ConsoleHandler.WriteToConsole("...", 500);
+                Console.Clear();
+                ConsoleHandler.WriteToConsole("Have a nice day", 20);
+                ConsoleHandler.WriteToConsole("...", 500);
+            } while (true);
+            
         }
     }
 }

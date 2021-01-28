@@ -24,6 +24,11 @@ No tool or manager needed for installation.
 2. User will be given a 4 digit pin code thats on the ticket
 ```
 ### Versions
+##### v0.7.3
+```
+1. User now gets a ticket with all infomation
+2. User cannot get a ticket from a parking spot that is in use
+```
 ##### v0.6.3
 ```
 1. User can now select a parking spot
@@ -69,8 +74,8 @@ No tool or manager needed for installation.
 ### ToDo list
 - [x] User can see all available parking spots.
 - [x] User can select parking spot from the list af all available parking spots.
-- [ ] User can select type of ticket for selected parking spot.
-- [ ] User gets a ticket with, a parking spot id, ticket id, ticket type, timestamp, and a pin code
+- [x] User can select type of ticket for selected parking spot.
+- [x] User gets a ticket with, a parking spot id, ticket id, ticket type, timestamp, and a pin code
 - [ ] On checkout user will input ticket(pin code) and get it back with a new time stamp and a receipt for payment
 ## Contributors
 [Lukas Pedersen](https://https://github.com/LukasPedersen)
