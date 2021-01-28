@@ -28,10 +28,10 @@ namespace Park_n_Wash
             }
             return listOfAvailavleSpots;
         }
-        public static List<ParkingSpot> ShowAllSpots()
-        {
-            return allSpots;
-        }
+
+        //Simple use of a Lambda witch returns a list of allSpots
+        public static List<ParkingSpot> ShowAllSpots() => allSpots;
+
         public static void SaveParkingSpot(List<ParkingSpot> ps)
         {
             allSpots = ps;
