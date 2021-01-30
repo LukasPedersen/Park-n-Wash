@@ -59,6 +59,29 @@ namespace Park_n_Wash
                 bool loop = true;
                 Console.Clear();
                 ConsoleHandler.WriteToConsole($"Hello and wellcome to Park'n'Wash\n", 20);
+                do
+                {
+                    ConsoleHandler.WriteToConsole($"1: Check in\n2: Check out\n", 20);
+                    string key = Console.ReadKey().KeyChar.ToString();
+                    Console.Clear();
+                    switch (key)
+                    {
+                        case "1":
+                            loop = false;
+                            break;
+                        case "2":
+                            ConsoleHandler.WriteToConsole($"Input pin code from your ticket:\n", 20);
+                            int pin = Convert.ToInt32(Console.ReadLine());
+                            gate.CheckOut(pin);
+                            Console.Clear();
+                            /// TODO: Display amount to pay
+                            ConsoleHandler.WriteToConsole("Please come again...", 20);
+                            Console.Clear();
+                            break;
+                    }
+
+                } while (loop);
+                loop = true;
                 //Finds all available parking spots and counts how many there are
                 foreach (ParkingSpot parkingspot in ParkingLot.ShowAvailableSpots())
                 {
@@ -78,7 +101,7 @@ namespace Park_n_Wash
                             break;
                     }
                 }
-                ConsoleHandler.WriteToConsole($"\nAvailable parking spots:\n[{countPersonalVehicle.ToString("000")}] Personal vehicle spots\n[{countTrailer.ToString("000")}] Trailer spots\n[{countTruck.ToString("000")}] Truck Spots\n[{countHandicapFriendly.ToString("000")}] Handicap friendly spots\n", 20);
+                ConsoleHandler.WriteToConsole($"Available parking spots:\n[{countPersonalVehicle.ToString("000")}] Personal vehicle spots\n[{countTrailer.ToString("000")}] Trailer spots\n[{countTruck.ToString("000")}] Truck Spots\n[{countHandicapFriendly.ToString("000")}] Handicap friendly spots\n", 20);
                 ConsoleHandler.WriteToConsole("\nSelect your parking spot type:\n1: Personal vehicle spot\n2: Trailer spot\n3: Truck Spot\n4: Handicap friendly spot\n", 20);
                 string spotType = "";
                 do
@@ -160,6 +183,7 @@ namespace Park_n_Wash
                     switch (key)
                     {
                         case "y":
+                            Console.Clear();
                             gate.CheckIn(ticketTypeInt, spotID);
                             loop = false;
                             break;
@@ -172,8 +196,8 @@ namespace Park_n_Wash
                 } while (loop);
                 loop = true;
                 Console.Clear();
-                ConsoleHandler.WriteToConsole("Here is your ticket", 100);
-                ConsoleHandler.WriteToConsole("...", 500);
+                ConsoleHandler.WriteToConsole("Printing ticket", 20);
+                ConsoleHandler.WriteToConsole("...", 1000);
                 Console.Clear();
                 ConsoleHandler.WriteToConsole("Have a nice day", 20);
                 ConsoleHandler.WriteToConsole("...", 500);
