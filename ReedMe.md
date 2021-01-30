@@ -14,16 +14,31 @@ No tool or manager needed for installation.
 
 ## Functionality
 
-### Input:
+## Input:
+##### On check in
 ```
-1. User only needs to input type of vehicle
+1. User inputs what type of vehicle the wanna park
+2. User chooses what type of ticket
 ```
-### Output:
+##### On check out
 ```
-1. User gets a ticket that is returned on check out
-2. User will be given a 4 digit pin code thats on the ticket
+1. User inputs there ticket(pin code)
+```
+## Output:
+##### On check in
+```
+1. User will get a "ticket" and will be givin a pin code to remember
+```
+##### On check out
+```
+1. User will get a receipt and pay the giving amount
 ```
 ### Versions
+##### v0.8.4
+```
+1. User can now check out
+2. Small update to ReadMe file
+```
 ##### v0.7.4
 ```
 1. Small patch for list in ParkingLot
@@ -41,10 +56,7 @@ No tool or manager needed for installation.
 ```
 1. Implemented common code
 2. Added ToDo list in ReadMe file
-```
-##### v0.4.3
-```
-1. Updated program to .netframework
+3. Updated program to .netframework
 ```
 ##### v0.4.2
 ```
@@ -80,7 +92,8 @@ No tool or manager needed for installation.
 - [x] User can select parking spot from the list af all available parking spots.
 - [x] User can select type of ticket for selected parking spot.
 - [x] User gets a ticket with, a parking spot id, ticket id, ticket type, timestamp, and a pin code
-- [ ] On checkout user will input ticket(pin code) and get it back with a new time stamp and a receipt for payment
+- [x] On checkout user will input ticket(pin code) and ticket will become valid again
+- [ ] On checkout user will get a new time stamp and a receipt for payment
 ## Contributors
 [Lukas Pedersen](https://https://github.com/LukasPedersen)
 

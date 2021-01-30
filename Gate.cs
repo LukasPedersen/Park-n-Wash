@@ -1,4 +1,5 @@
 ﻿using System;
+using Park_n_Wash.Common;
 using System.Collections.Generic;
 using System.Text;
 
@@ -17,9 +18,24 @@ namespace Park_n_Wash
             CreateTicket(ticketType, parkingSpotID);
         }
 
-        public void CheckOut(UInt16 ticketType, int parkingSpotID)
+        public void CheckOut(int pin)
         {
-
+            int spotID = 0;
+            foreach (Ticket ticket in tickets)
+            {
+                if (ticket.Pin == pin)
+                {
+                    spotID = ticket.SpotID;
+                }
+            }
+            foreach (ParkingSpot parkingSpot in ParkingLot.ShowAllSpots())
+            {
+                if (parkingSpot.ID == spotID)
+                {
+                    parkingSpot.Occupied = false;
+                }
+            }
+            /// TODO: Calculate amount to pay
         }
         /// <summary>
         /// Create a ticket with a random TicketID and random Pin a TimeStamp and a parking spot id
@@ -28,26 +44,32 @@ namespace Park_n_Wash
         /// <param name="parkingSpotID"></param>
         private void CreateTicket(UInt16 ticketType, int parkingSpotID)
         {
-            
             switch (ticketType)
             {
                 case 1:
-                    tickets.Add(new TicketGold(GenerateTicketID(), DateTime.Now, parkingSpotID, GeneratePin()));
+                    Ticket g = new TicketGold(GenerateTicketID(), DateTime.Now, parkingSpotID, GeneratePin());
+                    ConsoleHandler.WriteToConsole($"Ticket infomation:\nTicket type: Gold\nTicket ID: {g.TicketID}\nParking spot ID: {g.SpotID}\nTicket pin code: {g.Pin} Remember this!\nParking cost per hour: {g.TicketTypeCost}kr/h\nTicket created: {g.TimeStamp}\n\nPress any key to continue...", 20);
+                    Console.ReadKey();
+                    tickets.Add(g);
                     break;
                 case 2:
-                    tickets.Add(new TicketSilver(GenerateTicketID(), DateTime.Now, parkingSpotID, GeneratePin()));
+                    Ticket s = new TicketSilver(GenerateTicketID(), DateTime.Now, parkingSpotID, GeneratePin());
+                    ConsoleHandler.WriteToConsole($"Ticket infomation:\nTicket type: Silver\nTicket ID: {s.TicketID}\nParking spot ID: {s.SpotID}\nTicket pin code: {s.Pin} Remember this!\nParking cost per hour: {s.TicketTypeCost}kr/h\nTicket created: {s.TimeStamp}\n\nPress any key to continue...", 20);
+                    Console.ReadKey();
+                    tickets.Add(s);
                     break;
                 case 3:
-                    tickets.Add(new TicketBronze(GenerateTicketID(), DateTime.Now, parkingSpotID, GeneratePin()));
-                    break;
-                default:
+                    Ticket b = new TicketBronze(GenerateTicketID(), DateTime.Now, parkingSpotID, GeneratePin());
+                    ConsoleHandler.WriteToConsole($"Ticket infomation:\nTicket type: Bronze\nTicket ID: {b.TicketID}\nParking spot ID: {b.SpotID}\nTicket pin code: {b.Pin} Remember this!\nParking cost per hour: {b.TicketTypeCost}kr/h\nTicket created: {b.TimeStamp}\n\nPress any key to continue...", 20);
+                    Console.ReadKey();
+                    tickets.Add(b);
                     break;
             }
         }
 
-        private void DeleteTicket()
+        private void MakeTicketInvalid()
         {
-            /// TODO: Delete ticket
+            /// TODO: "Delete" ticket
         }
 
         /// <summary>
