@@ -7,7 +7,7 @@ namespace Park_n_Wash
     public class ParkingLot
     {
         //Fields
-        private static List<ParkingSpot> allSpots;
+        static List<ParkingSpot> allSpots;
 
         //Constructor
         public ParkingLot()

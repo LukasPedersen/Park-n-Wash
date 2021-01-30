@@ -24,6 +24,10 @@ No tool or manager needed for installation.
 2. User will be given a 4 digit pin code thats on the ticket
 ```
 ### Versions
+##### v0.7.4
+```
+1. Small patch for list in ParkingLot
+```
 ##### v0.7.3
 ```
 1. User now gets a ticket with all infomation

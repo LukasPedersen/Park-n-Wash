@@ -44,12 +44,10 @@ namespace Park_n_Wash
                     break;
             }
         }
-        /// <summary>
-        /// 
-        /// </summary>
+
         private void DeleteTicket()
         {
-
+            /// TODO: Delete ticket
         }
 
         /// <summary>
