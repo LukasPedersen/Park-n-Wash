@@ -18,14 +18,19 @@ namespace Park_n_Wash
             CreateTicket(ticketType, parkingSpotID);
         }
 
-        public void CheckOut(int pin)
+        public string CheckOut(int pin)
         {
+            string timeParked = "";
             int spotID = 0;
+            double pay;
             foreach (Ticket ticket in tickets)
             {
                 if (ticket.Pin == pin)
                 {
                     spotID = ticket.SpotID;
+                    TimeSpan parkingDuration = DateTime.Now - ticket.TimeStamp;
+                    pay = (ticket.TicketTypeCost / 60) * parkingDuration.TotalMinutes;
+                    timeParked = $"You have parked for:\n{parkingDuration.Days} Days\n{parkingDuration.Hours} Hours\n{parkingDuration.Minutes} Minutes\n\nSo you need to pay: {pay.ToString("0.00")} Kr.\nPress any key to pay...";
                 }
             }
             foreach (ParkingSpot parkingSpot in ParkingLot.ShowAllSpots())
@@ -35,7 +40,8 @@ namespace Park_n_Wash
                     parkingSpot.Occupied = false;
                 }
             }
-            /// TODO: Calculate amount to pay
+            
+            return timeParked;
         }
         /// <summary>
         /// Create a ticket with a random TicketID and random Pin a TimeStamp and a parking spot id

@@ -72,7 +72,8 @@ namespace Park_n_Wash
                         case "2":
                             ConsoleHandler.WriteToConsole($"Input pin code from your ticket:\n", 20);
                             int pin = Convert.ToInt32(Console.ReadLine());
-                            gate.CheckOut(pin);
+                            ConsoleHandler.WriteToConsole(gate.CheckOut(pin), 20);
+                            Console.ReadKey();
                             Console.Clear();
                             /// TODO: Display amount to pay
                             ConsoleHandler.WriteToConsole("Please come again...", 20);

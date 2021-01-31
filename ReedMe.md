@@ -34,6 +34,11 @@ No tool or manager needed for installation.
 1. User will get a receipt and pay the giving amount
 ```
 ### Versions
+##### v0.9.4
+```
+1. User will now be asked to pay the bill for how long they have been parked
+2. User is now able to see how long they have been parked
+```
 ##### v0.8.4
 ```
 1. User can now check out
@@ -93,7 +98,7 @@ No tool or manager needed for installation.
 - [x] User can select type of ticket for selected parking spot.
 - [x] User gets a ticket with, a parking spot id, ticket id, ticket type, timestamp, and a pin code
 - [x] On checkout user will input ticket(pin code) and ticket will become valid again
-- [ ] On checkout user will get a new time stamp and a receipt for payment
+- [x] On checkout user will get a new time stamp and a receipt for payment
 ## Contributors
 [Lukas Pedersen](https://https://github.com/LukasPedersen)
 

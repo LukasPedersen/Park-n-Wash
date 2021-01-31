@@ -13,7 +13,7 @@ namespace Park_n_Wash
             TimeStamp = timeStamp;
             SpotID = spotID;
             Pin = pin;
-            TicketTypeCost = 50;
+            TicketTypeCost = 350;
         }
     }
 }

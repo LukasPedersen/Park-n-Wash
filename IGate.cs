@@ -7,6 +7,6 @@ namespace Park_n_Wash
     public interface IGate
     {
         void CheckIn(UInt16 ticketType, int parkingSpotID);
-        void CheckOut(int pin);
+        string CheckOut(int pin);
     }
 }
