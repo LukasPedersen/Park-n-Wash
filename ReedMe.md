@@ -100,13 +100,15 @@ No tool or manager needed for installation.
 - [x] User can see all available parking spots.
 - [x] User can select parking spot from the list af all available parking spots.
 - [x] User can select type of ticket for selected parking spot.
-- [x] User gets a ticket with, a parking spot id, ticket id, ticket type, timestamp, and a pin code
-- [x] On checkout user will input ticket(pin code) and ticket will become valid again
-- [x] On checkout user will get a new time stamp and a receipt for payment
+- [x] User gets a ticket with, a parking spot id, ticket id, ticket type, timestamp, and a pin code.
+- [x] On checkout user will input ticket(pin code) and ticket will become valid again.
+- [x] On checkout user will get a new time stamp and a receipt for payment.
+- [ ] If user buys gold/silver ticket, user will have there car washed if they are parked for at least 10 min.
+- [ ] Car wash runs independently on there own thread as a task.
 ## Contributors
 [Lukas Pedersen](https://https://github.com/LukasPedersen)
 
 
-If you wanna contribute contact Owner
+If you wanna contribute to the code, contact Owner
 ## Owner
 [Lukas Pedersen](https://https://github.com/LukasPedersen)
