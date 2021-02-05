@@ -34,6 +34,10 @@ No tool or manager needed for installation.
 1. User will get a receipt and pay the giving amount
 ```
 ### Versions
+##### v0.9.5
+```
+1. User can now see what diffrent tickets cost
+```
 ##### v0.9.4
 ```
 1. User will now be asked to pay the bill for how long they have been parked

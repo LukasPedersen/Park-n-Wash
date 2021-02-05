@@ -75,7 +75,6 @@ namespace Park_n_Wash
                             ConsoleHandler.WriteToConsole(gate.CheckOut(pin), 20);
                             Console.ReadKey();
                             Console.Clear();
-                            /// TODO: Display amount to pay
                             ConsoleHandler.WriteToConsole("Please come again...", 20);
                             Console.Clear();
                             break;
@@ -144,7 +143,7 @@ namespace Park_n_Wash
                 Console.Clear();
 
                 ConsoleHandler.WriteToConsole("Select ticket type\n", 20);
-                ConsoleHandler.WriteToConsole("\nDifference between ticket types\nGold ticket includes: Parking, car wash and better security\nSilver ticket includes: Parking and car wash\nBronze ticket includes: Parking\n", 20);
+                ConsoleHandler.WriteToConsole("\nDifference between ticket types\nGold ticket 500kr kr/t includes: Parking, car wash and better security\nSilver ticket 350kr kr/t includes: Parking and car wash\nBronze ticket 200kr kr/t includes: Parking\n", 20);
                 ConsoleHandler.WriteToConsole("1: Gold\n2: Silver\n3: Bronze\nX: Exit\n", 20);
                 UInt16 ticketTypeInt = 0;
                 string ticketTypeString = "";
