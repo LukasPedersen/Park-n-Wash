@@ -15,7 +15,20 @@ namespace Park_n_Wash
         }
         public void CheckIn(UInt16 ticketType, int parkingSpotID)
         {
+            CarWash cw = new CarWash();
             CreateTicket(ticketType, parkingSpotID);
+            if (ticketType == 1 || ticketType == 2)
+            {
+                foreach (Ticket ticket in tickets)
+                {
+                    if (ticket.SpotID == parkingSpotID)
+                    {
+                        cw.WashNewCar(ticket);
+                    }
+                    
+                }
+                
+            }
         }
 
         public string CheckOut(int pin)
@@ -30,7 +43,11 @@ namespace Park_n_Wash
                     spotID = ticket.SpotID;
                     TimeSpan parkingDuration = DateTime.Now - ticket.TimeStamp;
                     pay = (ticket.TicketTypeCost / 60) * parkingDuration.TotalMinutes;
-                    timeParked = $"You have parked for:\n{parkingDuration.Days} Days\n{parkingDuration.Hours} Hours\n{parkingDuration.Minutes} Minutes\n\nSo you need to pay: {pay.ToString("0.00")} Kr.\nPress any key to pay...";
+
+                    if (parkingDuration.Minutes >= 10)
+                    timeParked = $"You have parked for:\n{parkingDuration.Days} Days\n{parkingDuration.Hours} Hours\n{parkingDuration.Minutes} Minutes\nYour car has been washed\n\nSo you need to pay: {pay.ToString("0.00")} Kr.\nPress any key to pay...";
+                    else
+                    timeParked = $"You have parked for:\n{parkingDuration.Days} Days\n{parkingDuration.Hours} Hours\n{parkingDuration.Minutes} Minutes\nYour car has not been washed\n\nSo you need to pay: {pay.ToString("0.00")} Kr.\nPress any key to pay...";
                 }
             }
             foreach (ParkingSpot parkingSpot in ParkingLot.ShowAllSpots())
@@ -50,17 +67,18 @@ namespace Park_n_Wash
         /// <param name="parkingSpotID"></param>
         private void CreateTicket(UInt16 ticketType, int parkingSpotID)
         {
+            CarWash washCar = new CarWash();
             switch (ticketType)
             {
                 case 1:
                     Ticket g = new TicketGold(GenerateTicketID(), DateTime.Now, parkingSpotID, GeneratePin());
-                    ConsoleHandler.WriteToConsole($"Ticket infomation:\nTicket type: Gold\nTicket ID: {g.TicketID}\nParking spot ID: {g.SpotID}\nTicket pin code: {g.Pin} Remember this!\nParking cost per hour: {g.TicketTypeCost}kr/h\nTicket created: {g.TimeStamp}\n\nPress any key to continue...", 20);
+                    ConsoleHandler.WriteToConsole($"Ticket infomation:\nTicket type: Gold (you need to be parked at least 10 min to get your car washed)\nTicket ID: {g.TicketID}\nParking spot ID: {g.SpotID}\nTicket pin code: {g.Pin} Remember this!\nParking cost per hour: {g.TicketTypeCost}kr/h\nTicket created: {g.TimeStamp}\n\nPress any key to continue...", 20);
                     Console.ReadKey();
                     tickets.Add(g);
                     break;
                 case 2:
                     Ticket s = new TicketSilver(GenerateTicketID(), DateTime.Now, parkingSpotID, GeneratePin());
-                    ConsoleHandler.WriteToConsole($"Ticket infomation:\nTicket type: Silver\nTicket ID: {s.TicketID}\nParking spot ID: {s.SpotID}\nTicket pin code: {s.Pin} Remember this!\nParking cost per hour: {s.TicketTypeCost}kr/h\nTicket created: {s.TimeStamp}\n\nPress any key to continue...", 20);
+                    ConsoleHandler.WriteToConsole($"Ticket infomation:\nTicket type: Silver (you need to be parked at least 10 min to get your car washed)\nTicket ID: {s.TicketID}\nParking spot ID: {s.SpotID}\nTicket pin code: {s.Pin} Remember this!\nParking cost per hour: {s.TicketTypeCost}kr/h\nTicket created: {s.TimeStamp}\n\nPress any key to continue...", 20);
                     Console.ReadKey();
                     tickets.Add(s);
                     break;
@@ -71,11 +89,6 @@ namespace Park_n_Wash
                     tickets.Add(b);
                     break;
             }
-        }
-
-        private void MakeTicketInvalid()
-        {
-            /// TODO: "Delete" ticket
         }
 
         /// <summary>

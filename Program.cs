@@ -48,7 +48,6 @@ namespace Park_n_Wash
         //User menu
         public static void Menu()
         {
-            Program pg = new Program();
             GateRepository gate = new GateRepository();
             do
             {
@@ -196,7 +195,7 @@ namespace Park_n_Wash
                 loop = true;
                 Console.Clear();
                 ConsoleHandler.WriteToConsole("Printing ticket", 20);
-                ConsoleHandler.WriteToConsole("...", 1000);
+                ConsoleHandler.WriteToConsole(".....", 1000);
                 Console.Clear();
                 ConsoleHandler.WriteToConsole("Have a nice day", 20);
                 ConsoleHandler.WriteToConsole("...", 500);

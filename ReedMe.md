@@ -34,6 +34,11 @@ No tool or manager needed for installation.
 1. User will get a receipt and pay the giving amount
 ```
 ### Versions
+##### v1.0.0
+```
+1. Cars will now be washed in 10 min time if user buys a gold/silver ticket
+2. User will be notified if car has benn washed
+```
 ##### v0.9.5
 ```
 1. User can now see what diffrent tickets cost
