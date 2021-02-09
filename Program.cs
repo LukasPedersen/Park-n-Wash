@@ -48,7 +48,6 @@ namespace Park_n_Wash
         //User menu
         public static void Menu()
         {
-            Program pg = new Program();
             GateRepository gate = new GateRepository();
             do
             {
@@ -141,7 +140,6 @@ namespace Park_n_Wash
                     }
                 }
                 Console.Clear();
-
                 ConsoleHandler.WriteToConsole("Select ticket type\n", 20);
                 ConsoleHandler.WriteToConsole("\nDifference between ticket types\nGold ticket 500kr kr/t includes: Parking, car wash and better security\nSilver ticket 350kr kr/t includes: Parking and car wash\nBronze ticket 200kr kr/t includes: Parking\n", 20);
                 ConsoleHandler.WriteToConsole("1: Gold\n2: Silver\n3: Bronze\nX: Exit\n", 20);
@@ -197,7 +195,7 @@ namespace Park_n_Wash
                 loop = true;
                 Console.Clear();
                 ConsoleHandler.WriteToConsole("Printing ticket", 20);
-                ConsoleHandler.WriteToConsole("...", 1000);
+                ConsoleHandler.WriteToConsole(".....", 1000);
                 Console.Clear();
                 ConsoleHandler.WriteToConsole("Have a nice day", 20);
                 ConsoleHandler.WriteToConsole("...", 500);
