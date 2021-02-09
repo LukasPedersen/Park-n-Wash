@@ -13,6 +13,10 @@ namespace Park_n_Wash
         private int pin;
         private int ticketTypeCost;
 
+        public virtual void ConsoleColor()
+        {
+
+        }
         //Properties
         public DateTime TimeStamp
         {

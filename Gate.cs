@@ -77,18 +77,21 @@ namespace Park_n_Wash
             {
                 case 1:
                     Ticket g = new TicketGold(GenerateTicketID(), DateTime.Now, parkingSpotID, GeneratePin());
+                    g.ConsoleColor();
                     ConsoleHandler.WriteToConsole($"Ticket infomation:\nTicket type: Gold (you need to be parked at least 10 min to get your car washed)\nTicket ID: {g.TicketID}\nParking spot ID: {g.SpotID}\nTicket pin code: {g.Pin} Remember this!\nParking cost per hour: {g.TicketTypeCost}kr/h\nTicket created: {g.TimeStamp}\n\nPress any key to continue...", 20);
                     Console.ReadKey();
                     tickets.Add(g);
                     break;
                 case 2:
                     Ticket s = new TicketSilver(GenerateTicketID(), DateTime.Now, parkingSpotID, GeneratePin());
+                    s.ConsoleColor();
                     ConsoleHandler.WriteToConsole($"Ticket infomation:\nTicket type: Silver (you need to be parked at least 10 min to get your car washed)\nTicket ID: {s.TicketID}\nParking spot ID: {s.SpotID}\nTicket pin code: {s.Pin} Remember this!\nParking cost per hour: {s.TicketTypeCost}kr/h\nTicket created: {s.TimeStamp}\n\nPress any key to continue...", 20);
                     Console.ReadKey();
                     tickets.Add(s);
                     break;
                 case 3:
                     Ticket b = new TicketBronze(GenerateTicketID(), DateTime.Now, parkingSpotID, GeneratePin());
+                    b.ConsoleColor();
                     ConsoleHandler.WriteToConsole($"Ticket infomation:\nTicket type: Bronze\nTicket ID: {b.TicketID}\nParking spot ID: {b.SpotID}\nTicket pin code: {b.Pin} Remember this!\nParking cost per hour: {b.TicketTypeCost}kr/h\nTicket created: {b.TimeStamp}\n\nPress any key to continue...", 20);
                     Console.ReadKey();
                     tickets.Add(b);

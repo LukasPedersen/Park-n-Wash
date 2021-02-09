@@ -14,7 +14,7 @@ namespace Park_n_Wash
         private static void InitializeComponents()
         {
             ParkingLot pl = new ParkingLot();
-            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            
 
             //Make 50 personal vehicle parking spots
             int idCount = 1;
@@ -51,6 +51,7 @@ namespace Park_n_Wash
             GateRepository gate = new GateRepository();
             do
             {
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
                 int countPersonalVehicle = 0;
                 int countTrailer = 0;
                 int countTruck = 0;

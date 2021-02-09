@@ -15,5 +15,10 @@ namespace Park_n_Wash
             Pin = pin;
             TicketTypeCost = 350;
         }
+        //Change text color to "Silver"
+        public override void ConsoleColor()
+        {
+            Console.ForegroundColor = System.ConsoleColor.Gray;
+        }
     }
 }
