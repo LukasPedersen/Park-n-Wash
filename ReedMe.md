@@ -34,6 +34,10 @@ No tool or manager needed for installation.
 1. User will get a receipt and pay the giving amount
 ```
 ### Versions
+##### v1.1.1
+```
+1. Console text color will now change to match the color of the ticket user gets
+```
 ##### v1.0.1
 ```
 1. Made some documentation on CarWash and Gate
