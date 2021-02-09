@@ -15,6 +15,10 @@ namespace Park_n_Wash
             allSpots = new List<ParkingSpot>();
         }
 
+        /// <summary>
+        /// Returns a list of all available parking spots
+        /// </summary>
+        /// <returns></returns>
         public static List<ParkingSpot> ShowAvailableSpots()
         {
             List<ParkingSpot> listOfAvailavleSpots = new List<ParkingSpot>();
@@ -24,7 +28,6 @@ namespace Park_n_Wash
                 {
                     listOfAvailavleSpots.Add(parkingSpot);
                 }
-
             }
             return listOfAvailavleSpots;
         }

@@ -17,10 +17,13 @@ namespace Park_n_Wash
         {
             CarWash cw = new CarWash();
             CreateTicket(ticketType, parkingSpotID);
+            //If ticket is a gold/silver start carwash
             if (ticketType == 1 || ticketType == 2)
             {
+                //Gets all tickets
                 foreach (Ticket ticket in tickets)
                 {
+                    //Findes ticket with the correct parking spot ID
                     if (ticket.SpotID == parkingSpotID)
                     {
                         cw.WashNewCar(ticket);
@@ -36,14 +39,17 @@ namespace Park_n_Wash
             string timeParked = "";
             int spotID = 0;
             double pay;
+            //Gets all tickets
             foreach (Ticket ticket in tickets)
             {
+                //Findes ticket with the correct pin
                 if (ticket.Pin == pin)
                 {
                     spotID = ticket.SpotID;
                     TimeSpan parkingDuration = DateTime.Now - ticket.TimeStamp;
                     pay = (ticket.TicketTypeCost / 60) * parkingDuration.TotalMinutes;
 
+                    //If car had parked for 10 min or longer the car has been washed
                     if (parkingDuration.Minutes >= 10)
                     timeParked = $"You have parked for:\n{parkingDuration.Days} Days\n{parkingDuration.Hours} Hours\n{parkingDuration.Minutes} Minutes\nYour car has been washed\n\nSo you need to pay: {pay.ToString("0.00")} Kr.\nPress any key to pay...";
                     else
@@ -67,7 +73,6 @@ namespace Park_n_Wash
         /// <param name="parkingSpotID"></param>
         private void CreateTicket(UInt16 ticketType, int parkingSpotID)
         {
-            CarWash washCar = new CarWash();
             switch (ticketType)
             {
                 case 1:

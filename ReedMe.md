@@ -1,6 +1,6 @@
 ﻿# Park'n'Wash
 
-Park'n'Wash is a parking/Washing program what lets you select a parkingspot and a washing machine will come and wash your vehicle while you're out and having a good time.
+Park'n'Wash is a parking/Washing program what lets you select a parkingspot, a washing machine will then come and wash your vehicle while you're out and having a good time.
 
 ## Installation
 
@@ -34,6 +34,10 @@ No tool or manager needed for installation.
 1. User will get a receipt and pay the giving amount
 ```
 ### Versions
+##### v1.0.1
+```
+1. Made some documentation on CarWash and Gate
+```
 ##### v1.0.0
 ```
 1. Cars will now be washed in 10 min time if user buys a gold/silver ticket
@@ -108,8 +112,8 @@ No tool or manager needed for installation.
 - [x] User gets a ticket with, a parking spot id, ticket id, ticket type, timestamp, and a pin code.
 - [x] On checkout user will input ticket(pin code) and ticket will become valid again.
 - [x] On checkout user will get a new time stamp and a receipt for payment.
-- [ ] If user buys gold/silver ticket, user will have there car washed if they are parked for at least 10 min.
-- [ ] Car wash runs independently on there own thread as a task.
+- [x] If user buys gold/silver ticket, user will have there car washed if they are parked for at least 10 min.
+- [x] Car wash runs independently on there own thread as a task.
 ## Contributors
 [Lukas Pedersen](https://https://github.com/LukasPedersen)
 
