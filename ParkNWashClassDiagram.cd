@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Park_n_Wash.ParkingLot">
+    <Position X="0.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAIACAAAAAAAAAAABAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>ParkingLot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Park_n_Wash.GateRepository" BaseTypeListCollapsed="true">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAABgAAAAIACAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Gate.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Right" Position="0.622" />
+  </Class>
+  <Class Name="Park_n_Wash.ParkingSpot">
+    <Position X="0.5" Y="3.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAEAAAgAAAAAAAAAAAAAABAAAAAQAAAAAAAgA=</HashCode>
+      <FileName>ParkingSpot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Park_n_Wash.Ticket">
+    <Position X="2.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAACCAAAAAAAIAAEACAABAAAAAAAAAIAAAAQAQAgA=</HashCode>
+      <FileName>Ticket.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Park_n_Wash.TicketBronze">
+    <Position X="4.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TicketBornze.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Park_n_Wash.TicketGold">
+    <Position X="4.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TicketGold.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Park_n_Wash.TicketSilver">
+    <Position X="4.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TicketSilver.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Park_n_Wash.CarWash">
+    <Position X="6.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAQAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CarWash.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Park_n_Wash.IGate">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IGate.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
