@@ -1,6 +1,6 @@
 ﻿# Park'n'Wash
 
-Park'n'Wash is a parking/Washing program what lets you select a parkingspot, a washing machine will then come and wash your vehicle while you're out and having a good time.
+Park'n'Wash is a parking/Washing program what lets you select a parkingspot and a washing machine will come and wash your vehicle while you're out and having a good time.
 
 ## Installation
 
@@ -34,23 +34,6 @@ No tool or manager needed for installation.
 1. User will get a receipt and pay the giving amount
 ```
 ### Versions
-##### v1.2.1
-```
-1. Added UnitTeting to test ticket
-```
-##### v1.1.1
-```
-1. Console text color will now change to match the color of the ticket user gets
-```
-##### v1.0.1
-```
-1. Made some documentation on CarWash and Gate
-```
-##### v1.0.0
-```
-1. Cars will now be washed in 10 min time if user buys a gold/silver ticket
-2. User will be notified if car has benn washed
-```
 ##### v0.9.5
 ```
 1. User can now see what diffrent tickets cost
@@ -117,15 +100,13 @@ No tool or manager needed for installation.
 - [x] User can see all available parking spots.
 - [x] User can select parking spot from the list af all available parking spots.
 - [x] User can select type of ticket for selected parking spot.
-- [x] User gets a ticket with, a parking spot id, ticket id, ticket type, timestamp, and a pin code.
-- [x] On checkout user will input ticket(pin code) and ticket will become valid again.
-- [x] On checkout user will get a new time stamp and a receipt for payment.
-- [x] If user buys gold/silver ticket, user will have there car washed if they are parked for at least 10 min.
-- [x] Car wash runs independently on there own thread as a task.
+- [x] User gets a ticket with, a parking spot id, ticket id, ticket type, timestamp, and a pin code
+- [x] On checkout user will input ticket(pin code) and ticket will become valid again
+- [x] On checkout user will get a new time stamp and a receipt for payment
 ## Contributors
 [Lukas Pedersen](https://https://github.com/LukasPedersen)
 
 
-If you wanna contribute to the code, contact Owner
+If you wanna contribute contact Owner
 ## Owner
 [Lukas Pedersen](https://https://github.com/LukasPedersen)
